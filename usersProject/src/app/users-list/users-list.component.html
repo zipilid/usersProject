@@ -1,0 +1,13 @@
+  <h3>List Of Users</h3>
+<form class="example-form">
+  <table class="example-full-width" cellspacing="0">
+    <tr *ngFor="let user of users" (click)="onSelect(user)" style="cursor: pointer">
+      <td>
+        <h4>{{user.title}}</h4>
+      </td>
+      <td>
+        <p> {{user.body}} </p>
+      </td>
+    </tr>
+  </table>
+</form>

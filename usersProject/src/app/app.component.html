@@ -1,0 +1,11 @@
+<md-sidenav-container class="example-sidenav-fab-container">
+  <md-sidenav #sidenav mode="side" opened="true">
+    <md-nav-list>
+      <a md-list-item routerLink="/users">List</a>
+      <a md-list-item routerLink="/add-user">Add User</a>
+    </md-nav-list>
+  </md-sidenav>
+  <div style="margin:30px">
+        <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

@@ -1,0 +1,21 @@
+<md-card class="example-card">
+  <md-card-header>
+    <md-card-title><h3>Edit User</h3></md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <form #userForm="ngForm" class="example-form">
+      <md-input-container class="example-full-width" style="width:100%">
+        <input required mdInput placeholder="First Name" name="fname" [(ngModel)]="user.title">
+      </md-input-container>
+      <md-input-container class="example-full-width" style="width:100%">
+        <input required mdInput placeholder="Last Name" name="lname" [(ngModel)]="user.body">
+      </md-input-container>
+    </form>
+
+  </md-card-content>
+  <p *ngIf="massage">{{massage}}</p>
+  <md-card-actions>
+    <button md-button (click)="edit()" [disabled]="!userForm.form.valid">Edit</button>
+    <button md-button (click)="cancel()">Cancel</button>
+  </md-card-actions>
+</md-card>
